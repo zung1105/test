@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nen{
+    background-color:rgb(173, 174, 176);
+    display: flex;
+    justify-content: center;
+}
+.anh img{
+    width: 260px;
+    margin-top: 50px;
+    height: 500px;
+    margin-bottom: 50px;
+    
+}
+
+.anh2
+{
+    width: 50%;
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 500px;
+     display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    gap:10px;
+}
+ .anh2con form
+{   
+    margin-top: 30px;
+    width: 80%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.anh2con input[type="email"],
+.anh2con input[type="password"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.anh2con button{
+    display: inline-block;
+    text-align: center ;
+    width: 370px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 20px;
+    background-color: rgb(95, 43, 226);
+    color:white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.anh2con .or
+{   
+    width: 100%;
+    text-align: center;
+    margin: 12px 0;
+    display: block;
+    border: none;
+}
+
+.anh2con input[type="password"]:hover
+{
+    border-color: blueviolet;
+    box-shadow: 1px 1px 1px 3px rgb(95, 43, 226);
+}
+
+.anh2con input[type="email"]:hover
+{
+border-color:solid blueviolet;
+    box-shadow: 1px 1px 1px 3px rgb(95, 43, 226);
+}
+
+.anh2con .or {
+    width: 370px;
+    text-align: center;
+    margin: 12px 0;
+    display: block;
+    border: none;
+}

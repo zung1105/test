@@ -1,0 +1,284 @@
+*{
+    box-sizing: border-box;
+    /* background-color: #ffffff; */
+   font-family: Arial, Helvetica, sans-serif;
+}
+.logo img
+{
+    width: 70%;
+}
+.menu1
+{
+    background-color: #fff;
+    color:rgb(41, 40, 40);
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    top:0;
+}
+
+.menu11
+{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.menu111
+{ 
+    display: flex;
+    justify-content:space-between;
+    justify-items: center;
+    gap:10px;
+}
+
+.menu2cha
+{
+    display:flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu2cha li a{
+    display: block;
+    color:rgb(28, 29, 29);
+    padding: 10px 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu2con
+{
+    list-style: none;
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    padding:15px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px 1px;
+    z-index: 1;
+}
+
+.menu2con li a
+{
+    color:rgb(0, 0, 0);
+}
+
+.menu2cha :hover .menu2con{
+    display:block;
+
+}
+
+.containercha{
+    position: relative;
+}
+
+.content1
+{
+   justify-self: center;
+   /* border: solid; */
+   width: 70%;
+   display: flex;
+   gap:10px;
+   justify-content:space-between;
+
+}
+.content11
+{
+    justify-content:space-between;
+    display: flex;
+    gap:10px;
+}
+.getin{
+    border: solid;
+    padding: 10px;
+    height: 40px;
+    text-align: center;
+    color:#fff;
+    background-color: black;
+    font-size:small;
+    font-weight: bolder;
+    width: 120px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.content2
+{
+   justify-self: center;
+   /* border: solid; */
+   width: 70%;
+}
+
+.content3 
+{
+   justify-self: center;
+   /* border: solid; */
+   width: 70%;
+}
+
+.content3 p button
+{
+    width: 10%;
+    margin: 0;
+    padding: 0;
+}
+
+.content4
+{
+   justify-content: center;
+   display: flex;
+   /* border: solid; */
+   width: 70%;
+   justify-self: center;
+}
+
+.content4 a
+{
+   text-decoration: none;
+}
+
+.content41
+{
+    width: 10%;
+    border: solid;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    border-color: black;
+    color:white;
+    background-color: black;
+}
+
+.menu11121
+{ 
+    display: flex;
+    justify-content:space-between;
+    justify-items: center;
+    gap:10px;
+    width: 80%;
+}
+
+.menu1112
+{
+    justify-content: center;
+    width: 70%;
+    display: flex;
+    justify-self: center;
+}
+
+.menu1112 img
+{
+    width: 250px;
+}
+
+.slide1
+{
+    width: 100%;
+    /* border: solid; */
+    overflow: hidden;
+}
+
+.slide1 img{
+    width:170px;
+}
+
+.slide2
+{   
+    display: flex;  
+    animation: truot 10s linear infinite;
+    gap:20px;
+}
+
+@keyframes truot {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.menu12
+{
+    background-color: #fff;
+    color:rgb(41, 40, 40);
+    z-index: 2;
+    width: 50%;
+    top:0;
+    justify-self: center;
+}
+
+.menu112
+{ 
+    display: flex;
+    /* justify-content:space-between; */
+    justify-items: center;
+    gap: 1px;
+}
+
+.menu3
+{
+    background-color: #fff;
+    color:rgb(41, 40, 40);
+    width: 100%;
+    top:0;
+    justify-self: center;
+    
+}
+
+.menu31
+{
+    display: flex;
+    justify-content: space-between;
+}
+.menu311 {
+    display: flex;
+    gap: 16px;
+}
+.menu311 a{
+    text-decoration: none;
+    font-size:small;
+    color:#6E6D7A;
+    
+}
+
+form {
+    display: flex;
+    align-items: center;
+    background: #f3f3f6;
+    border-radius: 24px;
+    padding: 6px 12px;
+    gap: 8px;
+}
+
+
+form input[type="text"] {
+    border-radius:50px;
+    background: #f3f3f6;
+    font-size:smaller;
+    margin-top: 5px;
+    border: #ecebf1;
+    width: 400px;
+    font-weight:lighter;
+    color:#979696;
+    outline: none;
+}
+
+form select {
+    border: none;
+    border-radius: 16px;
+    font-size:small;
+    cursor: pointer;
+   font-weight: bolder;
+    background: #f3f3f6;
+        outline: none;
+
+
+}
+
+select option {
+    color: #222;
+    background: #f3f3f6;
+   border: none;
+   
+}
