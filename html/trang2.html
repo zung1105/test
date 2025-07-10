@@ -20,17 +20,17 @@
         <div class="anh2con">
             <h2>Welcome back to Nucleus</h2>
             <p style="color: rgb(151, 151, 151);">Build your design system effortessly with our powerful component libary</p>
-         <form>
-            <label for="email">Email</label>
-            <input id="email" type="email" placeholder="alex.jordan@gmail.com" required/>
-            <label>Password</label>
+         <form onsubmit="return ktemail();">
+            <label for="email" style="color: rgb(100, 100, 100);">Email</label>
+            <input id="email" type="text" placeholder="alex.jordan@gmail.com" />
+            <label style="color: rgb(100, 100, 100);">Password</label>
             <input type="password" placeholder="......." required/>
-         </form>
            <a href="#" style="color: blueviolet; font-weight: bolder;">Forgot password?</a>
-           <p>Remeber sign in details</p>
-           <button><p onclick="dangnhap(1)">Log in</p></button>
+           <p style="color: rgb(100, 100, 100);">Remeber sign in details</p>
+           <button type="submit">Log in</button>
            <p class="or">Or</p>
-          <button id="button2"><p onclick="dangnhap(0)">Continue with Google</p></button>
+          <button id="button2" type="submit"  onclick="dangnhap(0)">Continue with Google</button>
+         </form>
          </div>
      </div>
   </div>

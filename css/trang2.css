@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .nen{
@@ -37,7 +37,7 @@
     flex-direction: column;
 }
 
-.anh2con input[type="email"],
+.anh2con input[type="text"],
 .anh2con input[type="password"] {
   padding: 10px;
   border-radius: 8px;
@@ -58,6 +58,7 @@
     outline: none;
     border: none;
     cursor: pointer;
+     min-height: 48px;
 }
 
 .anh2con .or
@@ -75,7 +76,7 @@
     box-shadow: 1px 1px 1px 3px rgb(95, 43, 226);
 }
 
-.anh2con input[type="email"]:hover
+.anh2con input[type="text"]:hover
 {
 border-color:solid blueviolet;
     box-shadow: 1px 1px 1px 3px rgb(95, 43, 226);
