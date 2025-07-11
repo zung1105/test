@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="../css/trang1.css" />
+      <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"  />
+    <style>
+
+    </style>
+  </head>
+  <body onload="themtoDolist()">
+    <input type="text" id="toDo"><button onclick="addtoDolist()">addNew</button>
+    <br><br>
+    <table border="1" cellpadding="10" id="table" >
+        
+    </table>
+    <script>
+        const toDolist=[]
+        function addtoDolist()
+        {
+            let toDo=document.getElementById("toDo").value
+            if(toDo !==""){
+                toDolist.unshift(
+                    {
+                        name:toDo,
+                        status: false
+                    }
+                )
+                document.getElementById("toDo").value=""
+                console.log(toDolist)
+                themtoDolist()
+            }
+        }
+        function themtoDolist()
+        {
+            let toDo=`<tr>
+         <th>name</th>
+         <th>status</th>
+         </tr>`
+         for(let i=0;i<toDolist.length;i++)
+         {
+            toDo=toDo+`<tr>         
+         <td>${toDolist[i].status ? `<s>${toDolist[i].name}</s>` : toDolist[i].name} </td>
+         <td><button onclick="changeStatus(${i})" >${toDolist[i].status ? "chua xong" : "done"}</button> </td>
+         </tr>`
+         }
+         document.getElementById("table").innerHTML=toDo
+        }
+        function changeStatus(n)
+        {
+            toDolist[n]={
+                name:toDolist[n].name,
+                status: !toDolist[n].status
+            }
+            themtoDolist()
+        }
+
+    </script>
+  </body>
+  </html>
