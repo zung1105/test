@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="../css/trang1.css" />
+      <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"  />
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <input type="text" id="text"><button onclick="themmoi()">add</button>
+    <br><br>
+    <table border="1" id="table">
+        <!-- <tr>
+            <th>Ten</th>
+            <th>Trang thai</th>
+        </tr>
+        <tr>
+            <td>dd</td>
+            <td><button>chua xong</button></td>
+        </tr> -->
+    </table>
+    <script>
+        let listnv=[]
+        function themmoi()
+        {
+            nv=document.getElementById("text").value
+            if(nv !==""){
+                listnv.unshift({
+                    name:nv,
+                    status:false,
+                    trangthai:0
+            })
+            }
+            document.getElementById("text").value=""
+            console.log(listnv)
+            hienthi()
+        }
+        function hienthi()
+        {
+          let nv=`<tr>
+            <th>Ten</th>
+            <th>Trang thai</th>
+        </tr>`
+          for(let i=0;i<listnv.length;i++)
+        {
+            nv=nv+`<tr>
+            <td><button onclick="trangthai2(${i})">${listnv[i].status ? `<s>${listnv[i].name}</s>`: listnv[i].name} </button></td>
+            <td><button onclick="trangthai(${i})">${listnv[i].status ? "chua xong"  : "xong"} </button>
+            <button onclick="xoa(${i})">Xoa</button>
+            </td>
+
+        </tr>`
+        }
+        document.getElementById("table").innerHTML=nv
+        }
+        function trangthai(n)
+        {
+            listnv[n]={
+                name:listnv[n].name,
+                status: !listnv[n].status
+            }
+            hienthi()
+        }
+        function trangthai2(n)
+        {
+            listnv[n]={
+                name:listnv[n].name,
+                trangthai: listnv[n].trangthai===0 ? 1 : 0
+            }
+            hienthi()
+        }
+        function xoa(n)
+        {
+            listnv.splice(n,1);
+            hienthi();
+        }
+    </script>
+  </body>
+  </html>
